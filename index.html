@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label, .sort-title {
+  font-size: 12px;
+}
+
+.sort-controls {
+  margin-bottom: 16px;
+}
+
+/* svg styles */
+.constituency {
+  fill-opacity: .85;
+}
+
+.labels {
+  font-size: 0.4em;
+  fill: #fff;
+  /*visibility: hidden;*/
+}
+</style>
+<body>
+
+<form id="sort-form" class="sort-controls">
+  <span class="sort-title">Sort by:</span>
+  <label>
+    <input type="radio" name="sort" value="az" checked /> AZ
+  </label>
+  <label>
+    <input type="radio" name="sort" value="party" /> Party
+  </label>
+  <label>
+    <input type="radio" name="sort" value="majority" /> Majority
+  </label>
+  <label>
+    <input type="radio" name="sort" value="majority_percentage" /> Majority %
+  </label>
+  <label>
+    <input type="radio" name="sort" value="electorate" /> Electorate
+  </label>
+  <label>
+    <input type="radio" name="sort" value="turnout_percentage" /> Turnout %
+  </label>
+</form>
+
+<div id="visualisation"></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="election.js"></script>
+</body>
+</html>
